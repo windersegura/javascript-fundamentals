@@ -1,5 +1,3 @@
-
-
 class Persona{
 
     static _conteo = 0;
@@ -44,5 +42,21 @@ class Persona{
     }
 }
 
-const spiderman = new Persona();
+class Heroe extends Persona {
+    
+    clan = 'sin clan';
+
+    constructor(nombre, codigo, frase){
+        super(nombre, codigo, frase);
+        this.clan = 'Los Avengers';
+    }
+
+    quienSoy(){
+        console.log(`Soy ${this.nombre}, ${this.clan}`);
+        super.quienSoy();
+    }
+}
+
+const spiderman = new Heroe();
+
 
